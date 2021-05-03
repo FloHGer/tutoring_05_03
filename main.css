@@ -1,0 +1,70 @@
+/* GENERAL */
+:root{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    height: 100vh;
+    
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+
+}
+
+header{
+    padding: 1rem;
+    background-color: #0f04;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+main{
+    background-color: #f004;
+    width: 100%;
+    height: 100%;
+    
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: 1fr minmax(20rem,5fr) 2fr;
+    grid-template-areas:
+    "side second  second" 
+    "side heading test"
+    "side bla     bla";
+}
+
+.test{
+    height: 100%;
+    width: 100%;
+    background-color: #ff0;
+    /* grid-row: 2/4; */
+    grid-area: side;
+
+    display: grid;
+}
+h2{
+    grid-area: heading;
+}
+
+footer{
+    background-color: #00f4;
+    width: 100%;
+    height: 100%;
+}
+
+ul{
+    display: flex;
+    flex-flow: row wrap;
+}
